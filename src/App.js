@@ -1,15 +1,15 @@
 import React from 'react';
-import { toast } from 'react-toastify';
+import { toast as toastConf } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import customToast from './customToast';
+import toast from './customToast';
 import logo from './logo.svg';
 import './App.css';
 
-toast.configure();
+toastConf.configure();
 
 function App() {
   const notify = () =>
-    customToast.success(
+    toast.success(
       '🦄 Wow so easy!',
       {
         position: 'top-right',
@@ -20,7 +20,7 @@ function App() {
         draggable: true,
         progress: undefined,
       },
-      customToast.error('🦄 Wow so easy!', {
+      toast.error('🦄 Wow so easy!', {
         position: 'top-right',
         autoClose: 3000,
         hideProgressBar: false,

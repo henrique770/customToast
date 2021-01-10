@@ -1,18 +1,18 @@
-import { toast } from 'react-toastify';
+import { toast as custom } from 'react-toastify';
 
-const customToast = {
+const toast = {
   success(msg, options = {}) {
-    return toast.success(msg, {
+    return custom.success(msg, {
       ...options,
       className: 'toast-success-container toast-container',
     });
   },
   error(msg, options = {}) {
-    return toast.error(msg, {
+    return custom.error(msg, {
       ...options,
       className: 'toast-error-container toast-container',
     });
   },
 };
 
-export default customToast;
+export default toast;
